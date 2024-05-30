@@ -40,7 +40,8 @@ void InitBluetooth(const char * btName, esp_spp_cb_t handler)
                 Serial.println("Error on BT Scan, no result!");
         }
         // Attach The CallBack Function Definition To SerialBlutooth Events
-        SerialBT.register_callback(&handler); // Attach The CallBack Function Definition To SerialBlutooth Events
+        //SerialBT.register_callback(&handler); // Attach The CallBack Function Definition To SerialBlutooth Events
+        SerialBT.register_callback(handler); // Attach The CallBack Function Definition To SerialBlutooth Events
 
         // If above line is in error, try the line below.
         // For Earlier versions of BluetoothSerial.h (SerialBT)
